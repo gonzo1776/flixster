@@ -13,7 +13,7 @@ class Instructor::CoursesController < ApplicationController
     else
         render :new, status: :unprocessable_entity
     end
-   end
+  end
 
   def show
   end
@@ -34,3 +34,4 @@ class Instructor::CoursesController < ApplicationController
   def course_params
     params.require(:course).permit(:title, :description, :cost)
   end
+end

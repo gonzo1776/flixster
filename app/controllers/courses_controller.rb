@@ -21,7 +21,11 @@ class CoursesController < ApplicationController
     def show
       @course = Course.find(params[:id])
     end
-  
+    
+    def image
+      @course = 
+    end
+
     private
   
     helper_method :current_course
@@ -30,6 +34,6 @@ class CoursesController < ApplicationController
     end
   
     def course_params
-      params.require(:course).permit(:title, :description, :cost)
+      params.require(:course).permit(:title, :description, :cost, :photos, :image)
     end
 end
